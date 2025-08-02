@@ -5,7 +5,11 @@ const Nav = () => {
     <nav className="flex items-center justify-center w-full mt-4">
       <div className="bg-[#171717] px-1   rounded-[29px]  h-[42px] flex items-center justify-center gap-[34px]">
         {/* KernUI Logo */}
-        <img src="/content.svg" alt="KernUI Logo" className=" self-center" />
+        <img
+          src="/kern-ui-logo.svg"
+          alt="KernUI Logo"
+          className=" self-center"
+        />
 
         {/* Navigation Items */}
         <a
