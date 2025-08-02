@@ -1,6 +1,9 @@
 import Nav from "./components/Nav";
 import Hero from "./sections/Hero";
 import FounderQuote from "./sections/FounderQuote";
+import KernUIFeatures from "./sections/KernUIFeatures";
+import DesignQuote from "./sections/DesignQuote";
+import Pricing from "./sections/Pricing";
 
 const Home = () => {
   return (
@@ -10,6 +13,9 @@ const Home = () => {
       </div>
       <Hero />
       <FounderQuote />
+      <KernUIFeatures />
+      <DesignQuote />
+      <Pricing />
     </div>
   );
 };
