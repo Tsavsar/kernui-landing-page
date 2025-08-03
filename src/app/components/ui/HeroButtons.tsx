@@ -19,7 +19,7 @@ const HeroButtons = () => {
 
       {/* Preview in Figma Button */}
       <button
-        className="flex items-center gap-[2px] h-[40px] rounded-[12px] px-[15px] py-[4px] pr-[10px] text-gray-900 font-medium text-sm border border-white"
+        className="flex items-center gap-[2px] h-[40px] rounded-[12px] px-[15px] py-[4px] text-gray-900 font-medium text-sm border border-white"
         style={{
           background: "#DCDCDC",
           borderImage:

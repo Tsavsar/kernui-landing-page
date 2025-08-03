@@ -4,6 +4,7 @@ import {
   Building,
   ChevronRight,
   ArrowUpRight,
+  MessageSquareText,
 } from "lucide-react";
 
 const PricingCards = () => {
@@ -110,6 +111,9 @@ const PricingCards = () => {
               >
                 {plan.action.label}
                 {plan.isHighlighted && <ChevronRight size={16} />}
+                {plan.action.label === "Contact us" && (
+                  <MessageSquareText size={16} />
+                )}
               </button>
 
               {/* Features Section */}

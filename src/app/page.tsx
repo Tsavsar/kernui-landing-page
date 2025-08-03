@@ -4,6 +4,10 @@ import FounderQuote from "./sections/FounderQuote";
 import KernUIFeatures from "./sections/KernUIFeatures";
 import DesignQuote from "./sections/DesignQuote";
 import Pricing from "./sections/Pricing";
+import MoreToCome from "./sections/MoreToCome";
+import ValueProposition from "./sections/ValueProposition";
+import FAQ from "./sections/FAQ";
+import Testimonials from "./sections/Testimonials";
 
 const Home = () => {
   return (
@@ -16,6 +20,10 @@ const Home = () => {
       <KernUIFeatures />
       <DesignQuote />
       <Pricing />
+      <MoreToCome />
+      <Testimonials />
+      <FAQ />
+      <ValueProposition />
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import PricingCards from "../components/PricingCards";
+import ComparePrices from "../components/ComparePrices";
 
 const Pricing = () => {
   return (
@@ -46,6 +47,7 @@ const Pricing = () => {
           themes, and support that scale.
         </p>
         <PricingCards />
+        <ComparePrices />
       </div>
     </section>
   );
