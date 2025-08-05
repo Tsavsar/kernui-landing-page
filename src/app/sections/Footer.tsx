@@ -208,7 +208,7 @@ const Footer = () => {
             </div>
 
             {/* Built with Care Text at Bottom */}
-            <div className="border-t border-[#333333] pt-6 w-full">
+            <div className="pt-6 w-full">
               <p className="text-[#D1D1D1] text-[14px]">
                 © 2025 Kern — built with care 🍞. All rights reserved.
               </p>
@@ -216,7 +216,7 @@ const Footer = () => {
           </div>
 
           {/* Desktop Copyright */}
-          <div className="hidden lg:block border-t border-[#333333] pt-8">
+          <div className="hidden lg:block pt-8">
             <p className="text-[#D1D1D1] text-[14px]">
               © 2025 Kern — built with care 🍞. All rights reserved.
             </p>

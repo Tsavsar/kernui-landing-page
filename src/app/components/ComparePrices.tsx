@@ -218,8 +218,8 @@ const ComparePrices = () => {
           </div>
         </div>
 
-        {/* Scroll Indicator Dots */}
-        <div className="flex justify-center mt-4 gap-2">
+        {/* Scroll Indicator Dots - Hidden on desktop */}
+        <div className="flex justify-center mt-4 gap-2 md:hidden">
           <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
           <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
           <div className="w-2 h-2 bg-gray-300 rounded-full"></div>

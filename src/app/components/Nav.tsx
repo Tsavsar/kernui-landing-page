@@ -80,7 +80,7 @@ const Nav = () => {
 
             {/* Preview Button */}
             <button
-              className={`bg-white rounded-[28px] px-2 py-[5px] flex items-center justify-center gap-[2px] h-[34px] ring-[2px] ring-[#242628] transition-all duration-300 ${
+              className={`bg-white rounded-[28px] px-2 py-[5px] flex items-center justify-center gap-[2px] h-[34px] ring-[2px] ring-[#242628] transition-all duration-300 mx-2 ${
                 isMenuOpen ? "w-full" : "w-[120px]"
               }`}
             >
