@@ -1,11 +1,10 @@
 const FounderQuote = () => {
   return (
-    <section className="flex justify-center w-full py-16">
-      <div className="relative">
+    <section className="flex justify-center w-full py-16 px-4 md:px-0">
+      <div className="relative w-full max-w-[566px]">
         <div
-          className="px-8 py-12 text-center"
+          className="px-8 py-12 text-center w-full"
           style={{
-            width: "566px",
             border: "1px solid #0000000D",
             borderRadius: "24px",
           }}

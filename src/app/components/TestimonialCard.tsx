@@ -17,19 +17,16 @@ const TestimonialCard = ({
 }: TestimonialCardProps) => {
   return (
     <div
-      className={`flex flex-col justify-between p-6 rounded-xl  relative`}
+      className={`flex flex-col justify-between p-4 md:p-6 rounded-xl relative w-full max-w-[420px] min-h-[300px] md:min-h-[418px]`}
       style={{
-        width: isHighlighted ? "420px" : "184px",
-        height: "418px",
         background: isHighlighted ? "#CA0016" : "#F7F7F7",
       }}
     >
       {/* Title */}
       <div className="text-left">
         <h3
-          className="font-semibold mb-4"
+          className="font-semibold mb-3 md:mb-4 text-[18px] md:text-[21px] leading-tight"
           style={{
-            fontSize: "21px",
             fontWeight: 600,
             color: isHighlighted ? "#FFFFFF" : "#171717",
           }}
@@ -37,12 +34,12 @@ const TestimonialCard = ({
           {title}
         </h3>
 
-        {/* Description - only for highlighted card */}
-        {isHighlighted && description && (
+        {/* Description - for both highlighted and non-highlighted cards */}
+        {description && (
           <p
-            className="text-sm leading-relaxed"
+            className="text-sm leading-relaxed mb-4"
             style={{
-              color: "#FFFFFF",
+              color: isHighlighted ? "#FFFFFF" : "#5C5C5C",
               fontSize: "14px",
               fontWeight: 500,
             }}
@@ -53,11 +50,10 @@ const TestimonialCard = ({
       </div>
 
       {/* Person Info */}
-      <div className="text-left">
+      <div className="text-left mt-auto">
         <p
-          className="font-medium mb-1"
+          className="font-medium mb-1 text-[15px] md:text-[16px]"
           style={{
-            fontSize: "16px",
             fontWeight: 500,
             color: isHighlighted ? "#FFFFFF" : "#171717",
           }}
@@ -65,9 +61,8 @@ const TestimonialCard = ({
           {person}
         </p>
         <p
-          className="text-sm"
+          className="text-sm text-[13px] md:text-[14px]"
           style={{
-            fontSize: "14px",
             fontWeight: 500,
             color: isHighlighted ? "#FFFFFF" : "#171717",
           }}

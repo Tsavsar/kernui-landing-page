@@ -7,37 +7,40 @@ const ValueProposition = () => {
       title: "Clean Handoffs",
       description:
         "Seamless collaboration between design and development teams with consistent components and clear documentation.",
+      image: "/value/value-card-1.svg",
     },
     {
       title: "Flexible Components",
       description:
         "Highly customizable components that adapt to your brand while maintaining design system consistency.",
+      image: "/value/value-card-2.svg",
     },
     {
       title: "Solid Workflow",
       description:
         "Streamlined design-dev workflow that reduces iteration cycles and speeds up product delivery.",
+      image: "/value/value-card-3.svg",
     },
   ];
 
   return (
-    <section className="w-full bg-[#F7F7F7] py-32 px-32 relative">
+    <section className="w-full bg-[#F7F7F7] py-16 md:py-32 px-4 md:px-32 relative">
       {/* Top Right Icon */}
       <img
         src="/layers-top.svg"
         alt="Layers"
-        className="absolute top-0 right-0"
+        className="absolute top-0 right-0 hidden md:block"
       />
       {/* Bottom Left Icon */}
       <img
         src="/layers-bottom.svg"
         alt="Layers"
-        className="absolute bottom-0 left-0"
+        className="absolute bottom-0 left-0 hidden md:block"
       />
 
       <div className="max-w-[1440px] mx-auto text-center relative">
         {/* Badge */}
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-6 md:mb-8">
           <div
             className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border text-xs font-medium bg-white shadow-sm"
             style={{
@@ -51,30 +54,35 @@ const ValueProposition = () => {
         </div>
 
         {/* Header */}
-        <h2 className="text-[36px] font-medium text-[#171717] mb-4">
+        <h2 className="text-[28px] md:text-[36px] font-medium text-[#171717] mb-4">
           Design once. Scale forever.
         </h2>
 
         {/* Subtitle */}
-        <p className="text-[18px] text-[#5C5C5C] leading-relaxed max-w-2xl mx-auto mb-12">
+        <p className="text-[16px] md:text-[18px] text-[#5C5C5C] leading-relaxed max-w-2xl mx-auto mb-8 md:mb-12">
           KernUI helps you move fast without breaking consistency. Built for
           startups and teams who want clean handoffs, flexible components, and a
           solid design-dev workflow.
         </p>
 
         {/* Value Cards */}
-        <div className="flex flex-col items-center mt-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 max-w-6xl mx-auto mb-12">
+        <div className="flex flex-col items-center mt-8 md:mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 max-w-6xl mx-auto mb-8 md:mb-12">
             {valueCards.map((card, index) => (
               <div key={index} className="flex flex-col items-center">
-                <div className="w-full max-w-[320px] h-[170px] bg-[#F7F7F7] border border-[#0000000D] rounded-[20px] flex items-center justify-center">
-                  {/* Image placeholder - will be replaced later */}
+                <div className="flex items-center justify-center">
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    style={{ width: "325.3333435058594px", height: "170px" }}
+                    className="object-cover rounded-[20px]"
+                  />
                 </div>
                 <div className="text-center mt-4">
-                  <h3 className="text-[18px] font-medium text-[#171717] mb-2">
+                  <h3 className="text-[16px] md:text-[18px] font-medium text-[#171717] mb-2">
                     {card.title}
                   </h3>
-                  <p className="text-[14px] text-[#5C5C5C] leading-relaxed max-w-[280px]">
+                  <p className="text-[13px] md:text-[14px] text-[#5C5C5C] leading-relaxed max-w-[280px]">
                     {card.description}
                   </p>
                 </div>

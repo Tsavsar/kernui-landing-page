@@ -34,8 +34,12 @@ const FeatureCards = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 max-w-6xl mx-auto">
         {features.map((feature, index) => (
           <div key={index} className="flex flex-col items-center">
-            <div className="w-full max-w-[320px] h-[170px] bg-[#F7F7F7] border border-[#0000000D] rounded-[20px] flex items-center justify-center">
-              {/* Image placeholder - will be replaced later */}
+            <div className="w-full max-w-[320px] h-[170px] bg-[#F7F7F7] rounded-[20px] overflow-hidden">
+              <img
+                src={`/features/feature-card-${index + 1}.svg`}
+                alt={feature.title}
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="text-center mt-4">
               <h3 className="text-[18px] font-medium text-[#171717] mb-2">

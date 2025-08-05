@@ -1,27 +1,31 @@
 import { ArrowUpRight } from "lucide-react";
 
 const MoreToCome = () => {
-  const upcomingFeatures = [
+  const features = [
     {
-      title: "Dashboard Templates",
+      title: "Dashboard Template",
       description:
         "Complete UI layouts for SaaS dashboards, settings, and analytics.",
+      icon: "/icons/dashboard.svg",
     },
     {
-      title: "Custom Illustration",
+      title: "Custom Illustrations",
       description:
         "Original, brand-ready art to elevate empty states and onboarding.",
+      icon: "/icons/designs.svg",
     },
     {
       title: "Charts & Data Visuals",
       description: "Beautiful, themeable charts ready to drop into dashboards.",
+      icon: "/icons/chart.svg",
     },
   ];
 
   return (
-    <section className="w-full py-16 px-4">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-[36px] font-medium text-[#171717] mb-4">
+    <section className="w-full bg-white py-16 md:py-32 px-4 md:px-32">
+      <div className="max-w-[1440px] mx-auto text-center">
+        {/* Header */}
+        <h2 className="text-[28px] md:text-[36px] font-medium text-[#171717] mb-4">
           <span className="inline-block">
             <span
               className="relative inline-block px-2 py-1 rounded"
@@ -35,7 +39,7 @@ const MoreToCome = () => {
                 justifyContent: "center",
               }}
             >
-              {/* Corner Boxes for More Stuff text */}
+              {/* Corner Boxes for Stuff text */}
               <span
                 className="absolute top-0 left-0 w-2 h-2 bg-white transform -translate-x-1/2 -translate-y-1/2"
                 style={{ border: "0.5px solid #FB3748" }}
@@ -57,45 +61,35 @@ const MoreToCome = () => {
           </span>{" "}
           To Look Forward To
         </h2>
-        <p className="text-[18px] text-[#5C5C5C] leading-relaxed max-w-2xl mx-auto">
+
+        {/* Subtitle */}
+        <p className="text-[16px] md:text-[18px] text-[#5C5C5C] leading-relaxed max-w-2xl mx-auto mb-8 md:mb-12">
           This is just version one as packed as it is, we're cooking up more
           amazing stuff, and your one time payment covers it all!
         </p>
 
-        {/* Feature Cards */}
-        <div className="flex flex-col items-center mt-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 max-w-6xl mx-auto">
-            {upcomingFeatures.map((feature, index) => (
+        {/* Features with Icons */}
+        <div className="flex flex-col items-center mt-8 md:mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 max-w-6xl mx-auto mb-8 md:mb-12">
+            {features.map((feature, index) => (
               <div key={index} className="flex flex-col items-center">
-                <div className="w-full max-w-[320px] h-[170px] bg-[#F7F7F7] border border-[#0000000D] rounded-[20px] flex items-center justify-center">
-                  {/* Image placeholder - will be replaced later */}
+                <div className="flex items-center justify-center mb-4">
+                  <img
+                    src={feature.icon}
+                    alt={feature.title}
+                    className="w-8 h-8"
+                  />
                 </div>
                 <div className="text-center mt-4">
-                  <h3 className="text-[18px] font-medium text-[#171717] mb-2">
+                  <h3 className="text-[16px] md:text-[18px] font-medium text-[#171717] mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-[14px] text-[#5C5C5C] leading-relaxed max-w-[280px]">
+                  <p className="text-[13px] md:text-[14px] text-[#5C5C5C] leading-relaxed max-w-[280px]">
                     {feature.description}
                   </p>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Beta Tester CTA */}
-        <div className="mt-12">
-          <div
-            className="inline-flex items-center gap-2 px-6 h-10 rounded-[32px]"
-            style={{ backgroundColor: "#F7F7F7" }}
-          >
-            <span className="text-[14px] text-[#5C5C5C]">
-              Want to get early access?
-            </span>
-            <span className="text-[14px] font-medium text-[#171717]">
-              Become a beta tester
-            </span>
-            <ArrowUpRight size={16} className="text-[#CA0016]" />
           </div>
         </div>
       </div>

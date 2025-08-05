@@ -2,7 +2,7 @@ import { ChevronRight } from "lucide-react";
 
 const HeroButtons = () => {
   return (
-    <div className="flex items-center gap-4 mt-8">
+    <div className="flex items-center gap-4 mt-8 justify-start md:justify-center">
       {/* Buy Now Button */}
       <button
         className="flex items-center gap-[2px] h-[40px] rounded-[12px] px-[15px] py-[4px] pr-[10px] text-white font-medium text-sm"

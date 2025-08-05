@@ -8,6 +8,7 @@ import MoreToCome from "./sections/MoreToCome";
 import ValueProposition from "./sections/ValueProposition";
 import FAQ from "./sections/FAQ";
 import Testimonials from "./sections/Testimonials";
+import Footer from "./sections/Footer";
 
 const Home = () => {
   return (
@@ -20,10 +21,12 @@ const Home = () => {
       <KernUIFeatures />
       <DesignQuote />
       <Pricing />
-      <MoreToCome />
       <Testimonials />
       <FAQ />
+      <MoreToCome />
+
       <ValueProposition />
+      <Footer />
     </div>
   );
 };

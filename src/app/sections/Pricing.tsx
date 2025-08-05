@@ -3,9 +3,9 @@ import ComparePrices from "../components/ComparePrices";
 
 const Pricing = () => {
   return (
-    <section className="w-full py-16 px-4">
+    <section className="w-full py-12 md:py-16 px-4">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-[36px] font-medium text-[#171717] mb-4">
+        <h2 className="text-[28px] md:text-[36px] font-medium text-[#171717] mb-4">
           Great{" "}
           <span className="inline-block">
             <span
@@ -42,7 +42,7 @@ const Pricing = () => {
           </span>{" "}
           Great Price
         </h2>
-        <p className="text-[18px] text-[#5C5C5C] leading-relaxed max-w-2xl mx-auto">
+        <p className="text-[16px] md:text-[18px] text-[#5C5C5C] leading-relaxed max-w-2xl mx-auto px-4 md:px-0">
           Start for free with the essentials. Upgrade when you need components,
           themes, and support that scale.
         </p>
