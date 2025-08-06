@@ -97,19 +97,6 @@ interface ParallaxScrollProps
   className?: string;
 }
 
-interface CounterAnimationProps
-  extends Omit<
-    HTMLMotionProps<"span">,
-    "initial" | "whileInView" | "viewport" | "transition" | "onUpdate"
-  > {
-  from?: number;
-  to: number;
-  duration?: number;
-  className?: string;
-  suffix?: string;
-  prefix?: string;
-}
-
 // Main ScrollAnimation component
 export const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
   children,
@@ -212,37 +199,5 @@ export const ParallaxScroll: React.FC<ParallaxScrollProps> = ({
     >
       {children}
     </motion.div>
-  );
-};
-
-// Counter animation
-export const CounterAnimation: React.FC<CounterAnimationProps> = ({
-  from = 0,
-  to,
-  duration = 2,
-  className = "",
-  suffix = "",
-  prefix = "",
-  ...props
-}) => {
-  return (
-    <motion.span
-      className={className}
-      initial={{ textContent: from }}
-      whileInView={{ textContent: to }}
-      viewport={{ once: true }}
-      transition={{ duration, ease: "easeOut" }}
-      onUpdate={(latest: any) => {
-        if (latest.textContent !== undefined) {
-          const current = Math.round(latest.textContent);
-          return `${prefix}${current}${suffix}`;
-        }
-      }}
-      {...props}
-    >
-      {prefix}
-      {from}
-      {suffix}
-    </motion.span>
   );
 };
