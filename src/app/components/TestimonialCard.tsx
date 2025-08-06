@@ -1,3 +1,7 @@
+"use client";
+
+import { ScrollAnimation } from "./animations/ScrollAnimations";
+
 interface TestimonialCardProps {
   title: string;
   person: string;
@@ -64,7 +68,7 @@ const TestimonialCard = ({
           className="text-sm text-[13px] md:text-[14px]"
           style={{
             fontWeight: 500,
-            color: isHighlighted ? "#FFFFFF" : "#171717",
+            color: isHighlighted ? "rgba(255, 255, 255, 0.8)" : "#171717",
           }}
         >
           {role} @{company}
