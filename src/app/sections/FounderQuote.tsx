@@ -34,6 +34,7 @@ const FounderQuote = () => {
               alt="Founder Avatar"
               width={100}
               height={100}
+              quality={100}
               style={{ objectFit: "cover", width: "72px", height: "72px" }}
             />
             <div className="text-left">
