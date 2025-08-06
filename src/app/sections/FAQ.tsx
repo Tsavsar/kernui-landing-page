@@ -1,6 +1,7 @@
 "use client";
 import { Plus, Minus, ArrowUpRight, MessageSquareText } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -40,22 +41,39 @@ const FAQ = () => {
   return (
     <section className="w-full bg-[#1C1C1C] py-16 px-4 relative">
       {/* Top Right Icon */}
-      <img
+      <Image
         src="/faq/layers-top.svg"
         alt="Layers"
-        className="absolute top-0 right-0"
+        width={200}
+        height={200}
+        style={{ objectFit: "contain", position: "absolute", top: 0, right: 0 }}
       />
       {/* Left Middle Icon */}
-      <img
+      <Image
         src="/faq/layers-middle.svg"
         alt="Layers"
-        className="absolute left-0 top-1/2 transform -translate-y-1/2"
+        width={200}
+        height={200}
+        style={{
+          objectFit: "contain",
+          position: "absolute",
+          left: 0,
+          top: "50%",
+          transform: "translateY(-50%)",
+        }}
       />
       {/* Bottom Icon */}
-      <img
+      <Image
         src="/faq/layers-buttom.svg"
         alt="Layers"
-        className="absolute bottom-0 right-0"
+        width={200}
+        height={200}
+        style={{
+          objectFit: "contain",
+          position: "absolute",
+          bottom: 0,
+          right: 0,
+        }}
       />
       <div className="max-w-6xl mx-auto text-center relative z-10">
         <h2 className="text-[36px] font-medium text-white mb-4">
@@ -227,10 +245,16 @@ const FAQ = () => {
                         padding: "25px 8px 0 8px",
                       }}
                     >
-                      <img
+                      <Image
                         src={`/card-${index + 1}.svg`}
                         alt={card.title}
-                        className="w-full h-full object-cover"
+                        width={640}
+                        height={480}
+                        style={{
+                          objectFit: "cover",
+                          width: "100%",
+                          height: "100%",
+                        }}
                       />
                     </div>
 
@@ -255,10 +279,16 @@ const FAQ = () => {
                           height: "36px",
                         }}
                       >
-                        <img
+                        <Image
                           src="/icons/youtube.svg"
                           alt="YouTube"
-                          className="w-4 h-4"
+                          width={32}
+                          height={32}
+                          style={{
+                            objectFit: "contain",
+                            width: "16px",
+                            height: "16px",
+                          }}
                         />
                         Watch now
                       </a>

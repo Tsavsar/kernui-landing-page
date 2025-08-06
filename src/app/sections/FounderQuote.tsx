@@ -32,8 +32,8 @@ const FounderQuote = () => {
             <Image
               src="/shater-avater.svg"
               alt="Founder Avatar"
-              width={120}
-              height={120}
+              width={100}
+              height={100}
               style={{ objectFit: "cover", width: "72px", height: "72px" }}
             />
             <div className="text-left">
