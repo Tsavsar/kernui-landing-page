@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const FeatureCards = () => {
   const features = [
     {
@@ -35,10 +37,12 @@ const FeatureCards = () => {
         {features.map((feature, index) => (
           <div key={index} className="flex flex-col items-center">
             <div className="w-full max-w-[320px] h-[170px] bg-[#F7F7F7] rounded-[20px] overflow-hidden">
-              <img
+              <Image
                 src={`/features/feature-card-${index + 1}.svg`}
                 alt={feature.title}
-                className="w-full h-full object-cover"
+                width={640}
+                height={340}
+                style={{ objectFit: "cover", width: "100%", height: "100%" }}
               />
             </div>
             <div className="text-center mt-4">

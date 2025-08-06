@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const DesignQuote = () => {
   return (
     <section className="w-full bg-[#F7F7F7] py-16 md:py-32 px-4 md:px-32 relative">
@@ -24,10 +26,13 @@ const DesignQuote = () => {
           <span className="text-[#CA0016]">"</span>
         </blockquote>
         <div className="flex flex-col items-center">
-          <img
+          <Image
             src="/cathy-pearl-avatar.svg"
             alt="Cathy Pearl"
-            className="w-12 h-12 md:w-16 md:h-16 mb-4"
+            width={120}
+            height={120}
+            style={{ objectFit: "cover", width: "64px", height: "64px" }}
+            className="w-16 h-16 md:w-20 md:h-20 mb-4"
           />
           <h3 className="text-[16px] md:text-[18px] font-medium text-[#171717] mb-1">
             Cathy Pearl

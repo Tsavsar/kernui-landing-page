@@ -15,41 +15,43 @@ const Nav = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center justify-center">
           <div className="bg-[#171717] px-1 rounded-[29px] h-[42px] flex items-center justify-center gap-[34px]">
-            {/* KernUI Logo */}
-            <img
-              src="/kern-ui-logo.svg"
-              alt="KernUI Logo"
-              className="self-center"
-            />
+            {/* KernUI Logo - Added flex items-center for proper alignment */}
+            <div className="flex items-center h-full pl-4">
+              <img
+                src="/logo.svg"
+                alt="KernUI Logo"
+                className="h-auto w-auto"
+              />
+            </div>
 
             {/* Navigation Items */}
             <a
               href="#pricing"
-              className="text-white hover:text-gray-300 transition-colors text-[14px] font-normal"
+              className="text-white hover:text-gray-300 transition-colors text-[14px] font-normal flex items-center"
             >
               Pricing
             </a>
             <a
               href="#roadmap"
-              className="text-white hover:text-gray-300 transition-colors text-[14px] font-normal"
+              className="text-white hover:text-gray-300 transition-colors text-[14px] font-normal flex items-center"
             >
               Roadmap
             </a>
             <a
               href="#reviews"
-              className="text-white hover:text-gray-300 transition-colors text-[14px] font-normal"
+              className="text-white hover:text-gray-300 transition-colors text-[14px] font-normal flex items-center"
             >
               Reviews
             </a>
             <a
               href="#resources"
-              className="text-white hover:text-gray-300 transition-colors text-[14px] font-normal"
+              className="text-white hover:text-gray-300 transition-colors text-[14px] font-normal flex items-center"
             >
               Resources
             </a>
             <a
               href="#find-us"
-              className="text-white hover:text-gray-300 transition-colors text-[14px] font-normal"
+              className="text-white hover:text-gray-300 transition-colors text-[14px] font-normal flex items-center"
             >
               Find us
             </a>
@@ -76,7 +78,11 @@ const Nav = () => {
             }`}
           >
             {/* Logo */}
-            <img src="/kern-ui-logo.svg" alt="KernUI Logo" className="h-8" />
+            <img
+              src="/logo.svg"
+              alt="KernUI Logo"
+              className="h-[18.25px] w-auto self-center"
+            />
 
             {/* Preview Button */}
             <button
@@ -97,7 +103,7 @@ const Nav = () => {
             {/* Hamburger Menu Button */}
             <button
               onClick={toggleMenu}
-              className="flex flex-col gap-1 p-2"
+              className="flex flex-col gap-1"
               aria-label="Toggle menu"
             >
               <div

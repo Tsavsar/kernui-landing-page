@@ -163,7 +163,7 @@ const FAQ = () => {
         <div className="mt-24">
           <div className="flex flex-col lg:flex-row gap-12 items-start max-w-6xl mx-auto">
             {/* Left Side - Header, Subtitle, and Contact */}
-            <div className="flex-1 text-left lg:sticky lg:top-8 lg:self-start">
+            <div className="flex-1 text-left lg:sticky lg:top-8 lg:self-start lg:pt-8">
               <h3 className="text-[36px] font-medium text-white mb-4">
                 Just Getting Into Design System? We Can Help!
               </h3>

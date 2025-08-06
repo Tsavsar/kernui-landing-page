@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const FounderQuote = () => {
   return (
     <section className="flex justify-center w-full py-16 px-4 md:px-0">
@@ -27,14 +29,16 @@ const FounderQuote = () => {
 
           {/* Founder Info */}
           <div className="flex items-center justify-center gap-3">
-            <img
+            <Image
               src="/shater-avater.svg"
               alt="Founder Avatar"
-              className="w-[40px] h-[40px]"
+              width={120}
+              height={120}
+              style={{ objectFit: "cover", width: "72px", height: "72px" }}
             />
             <div className="text-left">
-              <p className="text-[14px] font-medium text-[#171717]">@tsavsar</p>
-              <p className="text-[12px] text-[#5C5C5C]">Builder & Designer</p>
+              <p className="text-[16px] font-medium text-[#171717]">@tsavsar</p>
+              <p className="text-[14px] text-[#5C5C5C]">Builder & Designer</p>
             </div>
           </div>
         </div>
