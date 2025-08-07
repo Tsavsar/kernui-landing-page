@@ -85,8 +85,8 @@ const MoreToCome = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 max-w-6xl mx-auto mb-8 md:mb-12">
               {features.map((feature, index) => (
                 <StaggerItem key={index}>
-                  <div className="flex flex-col items-center group">
-                    <div className="flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
+                  <div className="flex flex-col items-center">
+                    <div className="flex items-center justify-center mb-4">
                       <img
                         src={feature.icon}
                         alt={feature.title}
@@ -94,10 +94,10 @@ const MoreToCome = () => {
                       />
                     </div>
                     <div className="text-center mt-4">
-                      <h3 className="text-[16px] md:text-[18px] font-medium text-[#171717] mb-2 transition-colors duration-300 group-hover:text-[#FB3748]">
+                      <h3 className="text-[16px] md:text-[18px] font-medium text-[#171717] mb-2">
                         {feature.title}
                       </h3>
-                      <p className="text-[13px] md:text-[14px] text-[#5C5C5C] leading-relaxed max-w-[280px] transition-colors duration-300 group-hover:text-[#171717]">
+                      <p className="text-[13px] md:text-[14px] text-[#5C5C5C] leading-relaxed max-w-[280px]">
                         {feature.description}
                       </p>
                     </div>
