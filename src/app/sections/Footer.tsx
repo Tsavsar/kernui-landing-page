@@ -181,6 +181,25 @@ const Footer = () => {
               </StaggerItem>
             </StaggerContainer>
 
+            {/* Product Hunt Badge */}
+            <ScrollAnimation animation="fadeInUp" duration={0.8} delay={0.4}>
+              <div className="flex justify-center mb-6">
+                <a
+                  href="https://www.producthunt.com/products/kernui-design-system?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-kernui&#0045;design&#0045;system"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1001930&theme=neutral&t=1754406040054"
+                    alt="KernUI&#0032;&#0045;&#0032;Design&#0032;System - The&#0032;UI&#0032;kit&#0032;your&#0032;&#0032;product&#0032;deserves&#0046; | Product Hunt"
+                    style={{ width: "250px", height: "54px" }}
+                    width="250"
+                    height="54"
+                  />
+                </a>
+              </div>
+            </ScrollAnimation>
+
             {/* Built with Care Text at Bottom */}
             <ScrollAnimation animation="fadeInUp" duration={0.8} delay={0.5}>
               <div className="pt-6 w-full">
@@ -190,6 +209,25 @@ const Footer = () => {
               </div>
             </ScrollAnimation>
           </div>
+
+          {/* Desktop Product Hunt Badge */}
+          <ScrollAnimation animation="fadeInUp" duration={0.8} delay={0.4}>
+            <div className="hidden lg:flex justify-center mb-6">
+              <a
+                href="https://www.producthunt.com/products/kernui-design-system?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-kernui&#0045;design&#0045;system"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1001930&theme=neutral&t=1754406040054"
+                  alt="KernUI&#0032;&#0045;&#0032;Design&#0032;System - The&#0032;UI&#0032;kit&#0032;your&#0032;&#0032;product&#0032;deserves&#0046; | Product Hunt"
+                  style={{ width: "250px", height: "54px" }}
+                  width="250"
+                  height="54"
+                />
+              </a>
+            </div>
+          </ScrollAnimation>
 
           {/* Desktop Copyright */}
           <ScrollAnimation animation="fadeInUp" duration={0.8} delay={0.5}>
