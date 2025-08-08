@@ -1,6 +1,7 @@
 "use client";
 import TrustedBy from "../components/ui/TrustedBy";
 import HeroButtons from "../components/ui/HeroButtons";
+import CursorButton from "../components/CursorButton";
 import {
   ScrollAnimation,
   StaggerContainer,
@@ -94,13 +95,76 @@ const Hero = () => {
         animation="scaleIn"
         duration={1.0}
         delay={0.4}
-        className="mt-12 w-full"
+        className="mt-12 w-full relative"
       >
         <img
-          src="/hero-section.svg"
+          src="/heroo.svg"
           alt="Hero Section"
           className="w-full max-w-6xl mx-auto"
         />
+
+        {/* Hero Image Overlay */}
+        <img
+          src="/hero-img.svg"
+          alt="Hero Image"
+          className="absolute top-10 left-64 w-20 h-48 md:w-[120px] md:h-[305px]"
+        />
+
+        {/* Cursor Buttons */}
+        {/* Green - Robin Hood (Desktop only) */}
+        <div className="absolute top-32 left-96 hidden md:block">
+          <CursorButton
+            text="Robin Hood"
+            backgroundColor="#039855"
+            arrowColor="#000000"
+          />
+        </div>
+
+        {/* Blue - Design (Desktop only) */}
+        <div className="absolute top-20 left-20 hidden md:block">
+          <CursorButton
+            text="Design"
+            backgroundColor="#1570EF"
+            arrowColor="#1570EF"
+          />
+        </div>
+
+        {/* Red - Developer (Desktop only) */}
+        <div className="absolute top-40 right-20 hidden md:block">
+          <CursorButton
+            text="Developer"
+            backgroundColor="#CA0016"
+            arrowColor="#CA0016"
+          />
+        </div>
+
+        {/* Yellow - Velma (Desktop only) */}
+        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 hidden md:block">
+          <CursorButton
+            text="Velma"
+            backgroundColor="#DC6803"
+            arrowColor="#000000"
+          />
+        </div>
+
+        {/* Mobile Cursor Buttons */}
+        {/* Blue - Design (Mobile - Left Bottom) */}
+        <div className="absolute bottom-10 left-4 md:hidden">
+          <CursorButton
+            text="Design"
+            backgroundColor="#1570EF"
+            arrowColor="#1570EF"
+          />
+        </div>
+
+        {/* Red - Developer (Mobile - Top Right) */}
+        <div className="absolute top-10 right-4 md:hidden">
+          <CursorButton
+            text="Developer"
+            backgroundColor="#CA0016"
+            arrowColor="#CA0016"
+          />
+        </div>
       </ScrollAnimation>
     </section>
   );
