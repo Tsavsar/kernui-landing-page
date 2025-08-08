@@ -79,7 +79,11 @@ const PricingCards = () => {
                     ? "bg-[#171717] text-white lg:-mt-8"
                     : "bg-white"
                 }`}
-                style={{ borderRadius: "24px" }}
+                style={{
+                  borderRadius: plan.isHighlighted
+                    ? "24px 24px 12px 12px"
+                    : "24px",
+                }}
               >
                 {/* Badge */}
                 <div
