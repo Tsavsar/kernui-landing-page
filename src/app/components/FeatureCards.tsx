@@ -54,6 +54,7 @@ const FeatureCards = () => {
               duration={0.8}
               delay={index * 0.15}
               className="w-full max-w-[320px] h-[170px] bg-[#F7F7F7] rounded-[20px] overflow-hidden group relative cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
+              style={{ border: "1px solid #DCDCDC" }}
             >
               <div className="absolute inset-0 bg-[#CA0016] opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
               <Image

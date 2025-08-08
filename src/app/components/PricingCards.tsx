@@ -129,8 +129,29 @@ const PricingCards = () => {
                   className={`w-full py-3 px-4 rounded-xl text-[14px] font-medium mb-6 text-center flex items-center justify-center gap-2 ${
                     plan.isHighlighted
                       ? "bg-[#CA0016] text-[#F7F7F7]"
+                      : plan.action.label === "Get started free"
+                      ? "bg-[#FAFAFA] text-[#171717]"
                       : "bg-[#FAFAFA] border border-[#0000000D] text-[#171717]"
                   }`}
+                  style={
+                    plan.action.label === "Buy now"
+                      ? {
+                          background: "#CA0016",
+                          border: "1px solid #A50012",
+                          boxShadow: `
+                             inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                             inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+                             0 1px 3px rgba(0, 0, 0, 0.12),
+                             0 1px 2px rgba(0, 0, 0, 0.24)
+                           `,
+                        }
+                      : plan.action.label === "Contact us"
+                      ? {
+                          background:
+                            "linear-gradient(180deg, #FFFFFF 0%, #FAFAFA 100%)",
+                        }
+                      : {}
+                  }
                 >
                   {plan.action.label}
                   {plan.isHighlighted && <ChevronRight size={16} />}

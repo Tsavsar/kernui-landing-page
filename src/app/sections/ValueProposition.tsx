@@ -85,7 +85,10 @@ const ValueProposition = () => {
               {valueCards.map((card, index) => (
                 <StaggerItem key={index}>
                   <div className="flex flex-col items-center group cursor-pointer">
-                    <div className="flex items-center justify-center overflow-hidden rounded-[20px] relative bg-[#F7F7F7] transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-lg">
+                    <div
+                      className="flex items-center justify-center overflow-hidden rounded-[20px] relative bg-[#F7F7F7] transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-lg"
+                      style={{ border: "1px solid #DCDCDC" }}
+                    >
                       {/* Hover overlay */}
                       <div className="absolute inset-0 bg-[#CA0016] opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
                       <img

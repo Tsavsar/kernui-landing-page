@@ -274,13 +274,12 @@ const FAQ = () => {
                         href={card.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 h-9 rounded-xl text-[14px] font-medium text-[#171717] border w-fit underline"
+                        className="inline-flex items-center gap-2 px-4 h-9 rounded-xl text-[14px] font-medium text-[#171717] w-fit underline relative"
                         style={{
                           background: "#FFFFFF",
-                          border:
-                            "1px solid var(--Strokes-stroke-soft, #0000000D)",
                           borderRadius: "12px",
                           height: "36px",
+                          boxShadow: "inset 0 0 0 1px #DCDCDC",
                         }}
                       >
                         <Image
