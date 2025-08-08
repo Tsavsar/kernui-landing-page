@@ -74,11 +74,12 @@ const PricingCards = () => {
               delay={index * 0.2}
             >
               <div
-                className={`w-full max-w-[320px] border border-[#0000000D] rounded-xl p-6 flex flex-col ${
+                className={`w-full max-w-[320px] border border-[#0000000D] p-6 flex flex-col ${
                   plan.isHighlighted
                     ? "bg-[#171717] text-white lg:-mt-8"
                     : "bg-white"
                 }`}
+                style={{ borderRadius: "24px" }}
               >
                 {/* Badge */}
                 <div
