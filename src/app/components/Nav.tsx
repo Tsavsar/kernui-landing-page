@@ -146,25 +146,24 @@ const Nav = () => {
             </ScrollAnimation>
 
             {/* Preview Button */}
-            <ScrollAnimation animation="scaleIn" duration={0.5} delay={0.7}>
-              <a
-                href="https://www.figma.com/design/rjtGbVAp1klmlQkfUD3O21/%E2%9C%A7-PREVIEW-%E2%9C%A7-KernUI---Design-System-%E2%9C%A7-Pro--v1.0-?node-id=570-21345&t=chmvby3Oj2Y6iS7J-0"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`bg-white rounded-[28px] px-2 py-[5px] flex items-center justify-center gap-[2px] h-[34px] ring-[2px] ring-[#242628] transition-all duration-300 mx-2 ${
-                  isMenuOpen ? "w-full" : "w-[120px]"
-                }`}
-              >
-                <img
-                  src="/figma-icon.svg"
-                  alt="Figma Icon"
-                  className="w-[24px] h-[24px]"
-                />
-                <span className="text-[14px] font-medium text-gray-900">
-                  Preview
-                </span>
-              </a>
-            </ScrollAnimation>
+
+            <a
+              href="https://www.figma.com/design/rjtGbVAp1klmlQkfUD3O21/%E2%9C%A7-PREVIEW-%E2%9C%A7-KernUI---Design-System-%E2%9C%A7-Pro--v1.0-?node-id=570-21345&t=chmvby3Oj2Y6iS7J-0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`bg-white rounded-[28px] px-2 py-[5px] flex items-center justify-center gap-[2px] h-[34px] ring-[2px] ring-[#242628] transition-all duration-300 mx-2 ${
+                isMenuOpen ? "w-full" : "w-[120px]"
+              }`}
+            >
+              <img
+                src="/figma-icon.svg"
+                alt="Figma Icon"
+                className="w-[24px] h-[24px]"
+              />
+              <span className="text-[14px] font-medium text-gray-900">
+                Preview
+              </span>
+            </a>
 
             {/* Hamburger Menu Button */}
             <ScrollAnimation animation="fadeInRight" duration={0.5} delay={0.9}>
