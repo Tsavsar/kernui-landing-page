@@ -12,15 +12,16 @@ import Footer from "./sections/Footer";
 
 const Home = () => {
   return (
-    <div className="min-h-screen w-full relative">
+    <div className="min-h-screen w-full relative overflow-x-hidden">
       {/* Top Right Icon */}
       <img
         src="/hero/layer-top.svg"
         alt="Layer Top"
-        className="absolute top-[-32px] right-[-50px] z-[-1]"
+        className="absolute top-[-32px] right-[-50px] z-[-1] pointer-events-none select-none"
         style={{
           width: "600px",
           height: "500px",
+          maxWidth: "100%",
         }}
       />
 
