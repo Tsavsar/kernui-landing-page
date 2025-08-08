@@ -1,11 +1,21 @@
-"use client"
+"use client";
 import TrustedBy from "../components/ui/TrustedBy";
 import HeroButtons from "../components/ui/HeroButtons";
-import { ScrollAnimation, StaggerContainer, StaggerItem } from "../components/animations/ScrollAnimations";
+import {
+  ScrollAnimation,
+  StaggerContainer,
+  StaggerItem,
+} from "../components/animations/ScrollAnimations";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col items-start md:items-center justify-center w-full py-16">
+    <section className="flex flex-col items-start md:items-center justify-center w-full py-16 relative">
+      {/* Background Layer Image */}
+      <img
+        src="/hero/layer-bottom.svg"
+        alt="Layer Bottom"
+        className="absolute top-48 left-0 hidden md:block z-[-1]"
+      />
       <div className="w-full px-4 md:px-0 flex flex-col items-start md:items-center">
         {/* TrustedBy with fade in animation */}
         <ScrollAnimation animation="fadeInUp" duration={0.8} delay={0.2}>
@@ -13,14 +23,17 @@ const Hero = () => {
         </ScrollAnimation>
 
         {/* Hero Caption with staggered animations */}
-        <StaggerContainer staggerDelay={0.15} className="text-left md:text-center mt-12 max-w-4xl">
+        <StaggerContainer
+          staggerDelay={0.15}
+          className="text-left md:text-center mt-12 max-w-4xl"
+        >
           {/* Main heading with slide up animation */}
           <StaggerItem animation="slideInUp">
             <h1 className="text-[60px] font-medium text-[#171717] leading-tight mb-6 max-w-5xl">
               The UI Kit Your <br className="hidden md:block" />
-              <ScrollAnimation 
-                animation="bounceIn" 
-                duration={1.2} 
+              <ScrollAnimation
+                animation="bounceIn"
+                duration={1.2}
                 delay={0.8}
                 className="inline-block"
               >
@@ -77,10 +90,10 @@ const Hero = () => {
       </div>
 
       {/* Hero Section Image with scale in animation */}
-      <ScrollAnimation 
-        animation="scaleIn" 
-        duration={1.0} 
-        delay={0.4} 
+      <ScrollAnimation
+        animation="scaleIn"
+        duration={1.0}
+        delay={0.4}
         className="mt-12 w-full"
       >
         <img

@@ -84,13 +84,15 @@ const ValueProposition = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 max-w-6xl mx-auto mb-8 md:mb-12">
               {valueCards.map((card, index) => (
                 <StaggerItem key={index}>
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center justify-center overflow-hidden rounded-[20px]">
+                  <div className="flex flex-col items-center group cursor-pointer">
+                    <div className="flex items-center justify-center overflow-hidden rounded-[20px] relative bg-[#F7F7F7] transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-lg">
+                      {/* Hover overlay */}
+                      <div className="absolute inset-0 bg-[#CA0016] opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
                       <img
                         src={card.image}
                         alt={card.title}
                         style={{ width: "325.333px", height: "170px" }}
-                        className="object-cover"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
                     <div className="text-center mt-4">

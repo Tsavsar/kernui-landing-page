@@ -116,7 +116,16 @@ const PricingCards = () => {
                 </p>
 
                 {/* Button */}
-                <button
+                <a
+                  href={
+                    plan.action.label === "Get started free"
+                      ? "https://tsavsar.gumroad.com/l/scmktb"
+                      : plan.action.label === "Buy now"
+                      ? "https://selar.com/114ps22911"
+                      : `mailto:shatermt@gmail.com?subject=KernUI Enterprise Inquiry`
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`w-full py-3 px-4 rounded-xl text-[14px] font-medium mb-6 text-center flex items-center justify-center gap-2 ${
                     plan.isHighlighted
                       ? "bg-[#CA0016] text-[#F7F7F7]"
@@ -128,7 +137,7 @@ const PricingCards = () => {
                   {plan.action.label === "Contact us" && (
                     <MessageSquareText size={16} />
                   )}
-                </button>
+                </a>
 
                 {/* Features Section */}
                 <div className="flex-1">

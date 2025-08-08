@@ -12,8 +12,19 @@ import Footer from "./sections/Footer";
 
 const Home = () => {
   return (
-    <div className="min-h-screen w-full">
-      <div className="w-full flex justify-center px-4">
+    <div className="min-h-screen w-full relative">
+      {/* Top Right Icon */}
+      <img
+        src="/hero/layer-top.svg"
+        alt="Layer Top"
+        className="absolute top-[-32px] right-[-50px] z-[-1]"
+        style={{
+          width: "600px",
+          height: "500px",
+        }}
+      />
+
+      <div className=" flex justify-center px-4">
         <Nav />
       </div>
       <Hero />

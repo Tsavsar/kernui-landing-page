@@ -29,7 +29,10 @@ const MoreToCome = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-16 md:py-32 px-4 md:px-32">
+    <section
+      id="roadmap"
+      className="w-full bg-white py-16 md:py-32 px-4 md:px-32"
+    >
       <div className="max-w-[1440px] mx-auto text-center">
         {/* Header with animation */}
         <ScrollAnimation animation="fadeInUp" duration={0.8}>

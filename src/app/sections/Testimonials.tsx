@@ -30,7 +30,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="w-full py-12 md:py-16 px-4">
+    <section id="reviews" className="w-full py-12 md:py-16 px-4">
       <div className="max-w-6xl mx-auto text-center">
         <ScrollAnimation animation="fadeInUp" duration={0.8}>
           <h2 className="text-[28px] md:text-[36px] font-medium text-[#171717] mb-4">

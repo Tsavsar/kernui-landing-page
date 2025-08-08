@@ -53,13 +53,15 @@ const FeatureCards = () => {
               animation="rotateIn"
               duration={0.8}
               delay={index * 0.15}
-              className="w-full max-w-[320px] h-[170px] bg-[#F7F7F7] rounded-[20px] overflow-hidden"
+              className="w-full max-w-[320px] h-[170px] bg-[#F7F7F7] rounded-[20px] overflow-hidden group relative cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
             >
+              <div className="absolute inset-0 bg-[#CA0016] opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
               <Image
                 src={`/features/feature-card-${index + 1}.svg`}
                 alt={feature.title}
                 width={640}
                 height={340}
+                className="transition-transform duration-300 group-hover:scale-105"
                 style={{ objectFit: "cover", width: "100%", height: "100%" }}
               />
             </ScrollAnimation>

@@ -7,9 +7,22 @@ import {
 } from "../components/animations/ScrollAnimations";
 
 const Footer = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <div className="w-full px-2 bg-[#F7F7F7]">
-      <footer className="w-full bg-[#171717] rounded-[24px] pt-16 lg:pt-32 px-4 lg:px-32 py-16 relative overflow-hidden">
+      <footer
+        id="find-us"
+        className="w-full bg-[#171717] rounded-[24px] pt-16 lg:pt-32 px-4 lg:px-32 py-16 relative overflow-hidden"
+      >
         {/* Background Decorations */}
         <img
           src="/footer/layer-top.svg"
@@ -53,53 +66,90 @@ const Footer = () => {
               {/* Column 1 */}
               <StaggerItem animation="fadeInUp">
                 <div className="flex flex-col gap-3">
-                  {[
-                    "Pricing",
-                    "Reviews",
-                    "Resources",
-                    "Roadmap",
-                    "Preview",
-                  ].map((item, i) => (
-                    <a
-                      key={i}
-                      href="#"
-                      className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300"
-                    >
-                      {item}
-                    </a>
-                  ))}
+                  <button
+                    onClick={() => scrollToSection("pricing")}
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300 text-left"
+                  >
+                    Pricing
+                  </button>
+                  <button
+                    onClick={() => scrollToSection("reviews")}
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300 text-left"
+                  >
+                    Reviews
+                  </button>
+                  <button
+                    onClick={() => scrollToSection("resources")}
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300 text-left"
+                  >
+                    Resources
+                  </button>
+                  <button
+                    onClick={() => scrollToSection("roadmap")}
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300 text-left"
+                  >
+                    Roadmap
+                  </button>
+                  <a
+                    href="https://www.figma.com/design/rjtGbVAp1klmlQkfUD3O21/%E2%9C%A7-PREVIEW-%E2%9C%A7-KernUI---Design-System-%E2%9C%A7-Pro--v1.0-?node-id=570-21345&t=chmvby3Oj2Y6iS7J-0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300"
+                  >
+                    Preview
+                  </a>
                 </div>
               </StaggerItem>
 
               {/* Column 2 */}
               <StaggerItem animation="fadeInUp">
                 <div className="flex flex-col gap-3">
-                  {["Schedule A Call", "FAQ", "Request A Feature"].map(
-                    (item, i) => (
-                      <a
-                        key={i}
-                        href="#"
-                        className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300"
-                      >
-                        {item}
-                      </a>
-                    )
-                  )}
+                  <a
+                    href="mailto:shatermt@gmail.com?subject=Schedule A Call - KernUI"
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300"
+                  >
+                    Schedule A Call
+                  </a>
+                  <button
+                    onClick={() => scrollToSection("faq")}
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300 text-left"
+                  >
+                    FAQ
+                  </button>
+                  <a
+                    href="mailto:shatermt@gmail.com?subject=Request A Feature - KernUI"
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300"
+                  >
+                    Request A Feature
+                  </a>
                 </div>
               </StaggerItem>
 
               {/* Column 3 */}
               <StaggerItem animation="fadeInUp">
                 <div className="flex flex-col gap-3">
-                  {["Twitter", "Mail", "Buy Now!"].map((item, i) => (
-                    <a
-                      key={i}
-                      href="#"
-                      className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300"
-                    >
-                      {item}
-                    </a>
-                  ))}
+                  <a
+                    href="https://twitter.com/usekernui"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300"
+                  >
+                    Twitter
+                  </a>
+                  <a
+                    href="mailto:shatermt@gmail.com?subject=KernUI Inquiry"
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300"
+                  >
+                    Mail
+                  </a>
+                  <a
+                    href="https://selar.com/114ps22911"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300"
+                  >
+                    Buy Now!
+                  </a>
                 </div>
               </StaggerItem>
             </StaggerContainer>
@@ -130,53 +180,90 @@ const Footer = () => {
               {/* Column 1 */}
               <StaggerItem animation="fadeInUp">
                 <div className="flex flex-col gap-3">
-                  {[
-                    "Pricing",
-                    "Reviews",
-                    "Resources",
-                    "Roadmap",
-                    "Preview",
-                  ].map((item, i) => (
-                    <a
-                      key={i}
-                      href="#"
-                      className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300"
-                    >
-                      {item}
-                    </a>
-                  ))}
+                  <button
+                    onClick={() => scrollToSection("pricing")}
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300 text-left"
+                  >
+                    Pricing
+                  </button>
+                  <button
+                    onClick={() => scrollToSection("reviews")}
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300 text-left"
+                  >
+                    Reviews
+                  </button>
+                  <button
+                    onClick={() => scrollToSection("resources")}
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300 text-left"
+                  >
+                    Resources
+                  </button>
+                  <button
+                    onClick={() => scrollToSection("roadmap")}
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300 text-left"
+                  >
+                    Roadmap
+                  </button>
+                  <a
+                    href="https://www.figma.com/design/rjtGbVAp1klmlQkfUD3O21/%E2%9C%A7-PREVIEW-%E2%9C%A7-KernUI---Design-System-%E2%9C%A7-Pro--v1.0-?node-id=570-21345&t=chmvby3Oj2Y6iS7J-0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300"
+                  >
+                    Preview
+                  </a>
                 </div>
               </StaggerItem>
 
               {/* Column 2 */}
               <StaggerItem animation="fadeInUp">
                 <div className="flex flex-col gap-3">
-                  {["Schedule A Call", "FAQ", "Request A Feature"].map(
-                    (item, i) => (
-                      <a
-                        key={i}
-                        href="#"
-                        className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300"
-                      >
-                        {item}
-                      </a>
-                    )
-                  )}
+                  <a
+                    href="mailto:shatermt@gmail.com?subject=Schedule A Call - KernUI"
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300"
+                  >
+                    Schedule A Call
+                  </a>
+                  <button
+                    onClick={() => scrollToSection("faq")}
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300 text-left"
+                  >
+                    FAQ
+                  </button>
+                  <a
+                    href="mailto:shatermt@gmail.com?subject=Request A Feature - KernUI"
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300"
+                  >
+                    Request A Feature
+                  </a>
                 </div>
               </StaggerItem>
 
               {/* Column 3 */}
               <StaggerItem animation="fadeInUp">
                 <div className="flex flex-col gap-3">
-                  {["Twitter", "Mail", "Buy Now!"].map((item, i) => (
-                    <a
-                      key={i}
-                      href="#"
-                      className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300"
-                    >
-                      {item}
-                    </a>
-                  ))}
+                  <a
+                    href="https://twitter.com/usekernui"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300"
+                  >
+                    Twitter
+                  </a>
+                  <a
+                    href="mailto:shatermt@gmail.com?subject=KernUI Inquiry"
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300"
+                  >
+                    Mail
+                  </a>
+                  <a
+                    href="https://selar.com/114ps22911"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#FFFFFF] text-[14px] hover:opacity-80 transition-opacity duration-300"
+                  >
+                    Buy Now!
+                  </a>
                 </div>
               </StaggerItem>
             </StaggerContainer>
@@ -190,7 +277,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1001930&theme=neutral&t=1754406040054"
+                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1001930&theme=dark&t=1754591877791"
                     alt="KernUI&#0032;&#0045;&#0032;Design&#0032;System - The&#0032;UI&#0032;kit&#0032;your&#0032;&#0032;product&#0032;deserves&#0046; | Product Hunt"
                     style={{ width: "250px", height: "54px" }}
                     width="250"
@@ -216,10 +303,9 @@ const Footer = () => {
               <a
                 href="https://www.producthunt.com/products/kernui-design-system?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-kernui&#0045;design&#0045;system"
                 target="_blank"
-                rel="noopener noreferrer"
               >
                 <img
-                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1001930&theme=neutral&t=1754406040054"
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1001930&theme=dark&t=1754591877791"
                   alt="KernUI&#0032;&#0045;&#0032;Design&#0032;System - The&#0032;UI&#0032;kit&#0032;your&#0032;&#0032;product&#0032;deserves&#0046; | Product Hunt"
                   style={{ width: "250px", height: "54px" }}
                   width="250"

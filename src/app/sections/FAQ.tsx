@@ -39,7 +39,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="w-full bg-[#1C1C1C] py-16 px-4 relative">
+    <section id="faq" className="w-full bg-[#1C1C1C] py-16 px-4 relative">
       {/* Top Right Icon */}
       <Image
         src="/faq/layers-top.svg"
@@ -166,7 +166,10 @@ const FAQ = () => {
 
         {/* Contact CTA */}
         <div className="flex justify-center">
-          <div className="inline-flex items-center gap-2 cursor-pointer">
+          <a
+            href="mailto:shatermt@gmail.com?subject=KernUI Question"
+            className="inline-flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
+          >
             <span className="text-[14px] text-[#A3A3A3]">
               Got any more questions?
             </span>
@@ -174,11 +177,11 @@ const FAQ = () => {
               Contact us
             </span>
             <ArrowUpRight size={16} className="text-[#CA0016]" />
-          </div>
+          </a>
         </div>
 
         {/* Design System Resources Section */}
-        <div className="mt-24">
+        <div id="resources" className="mt-24">
           <div className="flex flex-col lg:flex-row gap-12 items-start max-w-6xl mx-auto">
             {/* Left Side - Header, Subtitle, and Contact */}
             <div className="flex-1 text-left lg:sticky lg:top-8 lg:self-start lg:pt-8">
@@ -193,8 +196,9 @@ const FAQ = () => {
               {/* Contact Section */}
               <div className="flex items-center gap-4">
                 <h4 className="text-[18px] text-white">Any more questions?</h4>
-                <button
-                  className="inline-flex items-center gap-2 px-4 h-10 rounded-xl text-[14px] font-medium w-fit"
+                <a
+                  href="mailto:shatermt@gmail.com?subject=KernUI Question"
+                  className="inline-flex items-center gap-2 px-4 h-10 rounded-xl text-[14px] font-medium w-fit hover:bg-[#3A3A3A] transition-colors"
                   style={{
                     background: "#292929",
                     borderRadius: "12px",
@@ -203,7 +207,7 @@ const FAQ = () => {
                 >
                   <span className="text-white">Contact us</span>
                   <MessageSquareText size={16} className="text-white" />
-                </button>
+                </a>
               </div>
             </div>
 

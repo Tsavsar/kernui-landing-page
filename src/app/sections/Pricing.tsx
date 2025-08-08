@@ -8,9 +8,13 @@ import {
   StaggerItem,
 } from "../components/animations/ScrollAnimations";
 
+import { useState } from "react";
+import { DollarSign } from "lucide-react";
+
 const Pricing = () => {
+  const [showComparePrices, setShowComparePrices] = useState(false);
   return (
-    <section className="w-full py-12 md:py-16 px-4">
+    <section id="pricing" className="w-full py-12 md:py-16 px-4">
       <div className="max-w-6xl mx-auto text-center">
         <ScrollAnimation animation="fadeInUp" duration={0.8}>
           <h2 className="text-[28px] md:text-[36px] font-medium text-[#171717] mb-4">
@@ -63,8 +67,28 @@ const Pricing = () => {
           <StaggerItem>
             <PricingCards />
           </StaggerItem>
+
+          {/* Compare Prices Button */}
           <StaggerItem>
-            <ComparePrices />
+            <div className="flex justify-center mt-8">
+              <button
+                onClick={() => setShowComparePrices(!showComparePrices)}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border text-center hover:bg-gray-50 transition-colors"
+                style={{
+                  border: "1px solid var(--Strokes-stroke-soft, #0000000D)",
+                  borderRadius: "12px",
+                }}
+              >
+                <DollarSign size={16} className="text-[#CA0016]" />
+                <span className="text-[14px] font-medium text-[#171717]">
+                  {showComparePrices ? "Hide comparison" : "Compare prices"}
+                </span>
+              </button>
+            </div>
+          </StaggerItem>
+
+          <StaggerItem>
+            <ComparePrices isVisible={showComparePrices} />
           </StaggerItem>
         </StaggerContainer>
       </div>

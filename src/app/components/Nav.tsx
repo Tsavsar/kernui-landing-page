@@ -14,14 +14,28 @@ const Nav = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      // Small delay to ensure mobile menu closes first
+      setTimeout(() => {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest",
+        });
+      }, 100);
+    }
+  };
+
   return (
     <ScrollAnimation
       animation="fadeInDown"
       duration={0.8}
       delay={0.2}
-      className="flex items-center justify-center w-full mt-4 bg-white py-4"
+      className="flex items-center justify-center mt-4 py-4"
     >
-      <nav className="w-full max-w-6xl mx-auto px-4">
+      <nav className=" max-w-6xl mx-auto px-4">
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center justify-center">
           <ScrollAnimation
@@ -50,62 +64,64 @@ const Nav = () => {
               className="flex items-center gap-[34px]"
             >
               <StaggerItem animation="fadeInUp">
-                <a
-                  href="#pricing"
+                <button
+                  onClick={() => scrollToSection("pricing")}
                   className="text-white hover:text-gray-300 transition-colors text-[14px] font-normal flex items-center"
                 >
                   Pricing
-                </a>
+                </button>
               </StaggerItem>
               <StaggerItem animation="fadeInUp">
-                <a
-                  href="#roadmap"
+                <button
+                  onClick={() => scrollToSection("roadmap")}
                   className="text-white hover:text-gray-300 transition-colors text-[14px] font-normal flex items-center"
                 >
                   Roadmap
-                </a>
+                </button>
               </StaggerItem>
               <StaggerItem animation="fadeInUp">
-                <a
-                  href="#reviews"
+                <button
+                  onClick={() => scrollToSection("reviews")}
                   className="text-white hover:text-gray-300 transition-colors text-[14px] font-normal flex items-center"
                 >
                   Reviews
-                </a>
+                </button>
               </StaggerItem>
               <StaggerItem animation="fadeInUp">
-                <a
-                  href="#resources"
+                <button
+                  onClick={() => scrollToSection("resources")}
                   className="text-white hover:text-gray-300 transition-colors text-[14px] font-normal flex items-center"
                 >
                   Resources
-                </a>
+                </button>
               </StaggerItem>
               <StaggerItem animation="fadeInUp">
-                <a
-                  href="#find-us"
+                <button
+                  onClick={() => scrollToSection("find-us")}
                   className="text-white hover:text-gray-300 transition-colors text-[14px] font-normal flex items-center"
                 >
                   Find us
-                </a>
+                </button>
               </StaggerItem>
             </StaggerContainer>
 
             {/* Figma Button */}
-            <ScrollAnimation
-              animation="bounceIn"
-              duration={0.8}
-              delay={1.0}
-              className="bg-white rounded-[28px] px-2 py-[5px] flex items-center gap-[2px] w-[101px] h-[34px] ring-[2px] ring-[#242628]"
-            >
-              <img
-                src="/figma-icon.svg"
-                alt="Figma Icon"
-                className="w-[24px] h-[24px]"
-              />
-              <span className="text-[14px] font-medium text-gray-900">
-                Preview
-              </span>
+            <ScrollAnimation animation="bounceIn" duration={0.8} delay={1.0}>
+              <a
+                href="https://www.figma.com/design/rjtGbVAp1klmlQkfUD3O21/%E2%9C%A7-PREVIEW-%E2%9C%A7-KernUI---Design-System-%E2%9C%A7-Pro--v1.0-?node-id=570-21345&t=chmvby3Oj2Y6iS7J-0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-[28px] px-2 py-[5px] flex items-center gap-[2px] w-[101px] h-[34px] ring-[2px] ring-[#242628]"
+              >
+                <img
+                  src="/figma-icon.svg"
+                  alt="Figma Icon"
+                  className="w-[24px] h-[24px]"
+                />
+                <span className="text-[14px] font-medium text-gray-900">
+                  Preview
+                </span>
+              </a>
             </ScrollAnimation>
           </ScrollAnimation>
         </div>
@@ -130,22 +146,24 @@ const Nav = () => {
             </ScrollAnimation>
 
             {/* Preview Button */}
-            <ScrollAnimation
-              animation="scaleIn"
-              duration={0.5}
-              delay={0.7}
-              className={`bg-white rounded-[28px] px-2 py-[5px] flex items-center justify-center gap-[2px] h-[34px] ring-[2px] ring-[#242628] transition-all duration-300 mx-2 ${
-                isMenuOpen ? "w-full" : "w-[120px]"
-              }`}
-            >
-              <img
-                src="/figma-icon.svg"
-                alt="Figma Icon"
-                className="w-[24px] h-[24px]"
-              />
-              <span className="text-[14px] font-medium text-gray-900">
-                Preview
-              </span>
+            <ScrollAnimation animation="scaleIn" duration={0.5} delay={0.7}>
+              <a
+                href="https://www.figma.com/design/rjtGbVAp1klmlQkfUD3O21/%E2%9C%A7-PREVIEW-%E2%9C%A7-KernUI---Design-System-%E2%9C%A7-Pro--v1.0-?node-id=570-21345&t=chmvby3Oj2Y6iS7J-0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`bg-white rounded-[28px] px-2 py-[5px] flex items-center justify-center gap-[2px] h-[34px] ring-[2px] ring-[#242628] transition-all duration-300 mx-2 ${
+                  isMenuOpen ? "w-full" : "w-[120px]"
+                }`}
+              >
+                <img
+                  src="/figma-icon.svg"
+                  alt="Figma Icon"
+                  className="w-[24px] h-[24px]"
+                />
+                <span className="text-[14px] font-medium text-gray-900">
+                  Preview
+                </span>
+              </a>
             </ScrollAnimation>
 
             {/* Hamburger Menu Button */}
@@ -189,49 +207,59 @@ const Nav = () => {
                 className="flex flex-col items-center gap-6"
               >
                 <StaggerItem animation="slideInLeft">
-                  <a
-                    href="#pricing"
+                  <button
+                    onClick={() => {
+                      scrollToSection("pricing");
+                      setIsMenuOpen(false);
+                    }}
                     className="text-white hover:text-gray-300 transition-colors text-[16px] font-normal"
-                    onClick={() => setIsMenuOpen(false)}
                   >
                     Pricing
-                  </a>
+                  </button>
                 </StaggerItem>
                 <StaggerItem animation="slideInLeft">
-                  <a
-                    href="#roadmap"
+                  <button
+                    onClick={() => {
+                      scrollToSection("roadmap");
+                      setIsMenuOpen(false);
+                    }}
                     className="text-white hover:text-gray-300 transition-colors text-[16px] font-normal"
-                    onClick={() => setIsMenuOpen(false)}
                   >
                     Roadmap
-                  </a>
+                  </button>
                 </StaggerItem>
                 <StaggerItem animation="slideInLeft">
-                  <a
-                    href="#reviews"
+                  <button
+                    onClick={() => {
+                      scrollToSection("reviews");
+                      setIsMenuOpen(false);
+                    }}
                     className="text-white hover:text-gray-300 transition-colors text-[16px] font-normal"
-                    onClick={() => setIsMenuOpen(false)}
                   >
                     Reviews
-                  </a>
+                  </button>
                 </StaggerItem>
                 <StaggerItem animation="slideInLeft">
-                  <a
-                    href="#resources"
+                  <button
+                    onClick={() => {
+                      scrollToSection("resources");
+                      setIsMenuOpen(false);
+                    }}
                     className="text-white hover:text-gray-300 transition-colors text-[16px] font-normal"
-                    onClick={() => setIsMenuOpen(false)}
                   >
                     Resources
-                  </a>
+                  </button>
                 </StaggerItem>
                 <StaggerItem animation="slideInLeft">
-                  <a
-                    href="#find-us"
+                  <button
+                    onClick={() => {
+                      scrollToSection("find-us");
+                      setIsMenuOpen(false);
+                    }}
                     className="text-white hover:text-gray-300 transition-colors text-[16px] font-normal"
-                    onClick={() => setIsMenuOpen(false)}
                   >
                     Find us
-                  </a>
+                  </button>
                 </StaggerItem>
               </StaggerContainer>
             </div>

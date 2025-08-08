@@ -4,7 +4,11 @@ import { DollarSign, Check, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useRef } from "react";
 import { ScrollAnimation } from "./animations/ScrollAnimations";
 
-const ComparePrices = () => {
+interface ComparePricesProps {
+  isVisible: boolean;
+}
+
+const ComparePrices = ({ isVisible }: ComparePricesProps) => {
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -91,28 +95,11 @@ const ComparePrices = () => {
     }
   };
 
+  if (!isVisible) return null;
+
   return (
     <ScrollAnimation animation="fadeInUp" duration={0.8} delay={0.4}>
       <div className="w-full mt-16">
-        {/* Compare Prices Button */}
-        <div className="flex justify-center mb-8">
-          <div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border text-center"
-            style={{
-              border: "1px solid var(--Strokes-stroke-soft, #0000000D)",
-              borderRadius: "12px",
-            }}
-          >
-            <DollarSign size={16} className="text-[#CA0016]" />
-            <span
-              className="text-[14px] font-medium"
-              style={{ color: "#171717" }}
-            >
-              Compare prices
-            </span>
-          </div>
-        </div>
-
         {/* Scroll Container with Indicators */}
         <div className="relative">
           {/* Left Arrow */}
