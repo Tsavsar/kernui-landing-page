@@ -126,7 +126,7 @@ const PricingCards = () => {
                     plan.action.label === "Get started free"
                       ? "https://tsavsar.gumroad.com/l/scmktb"
                       : plan.action.label === "Buy now"
-                      ? "https://selar.com/114ps22911"
+                      ? "https://whop.com/tsavsar/kernui-design-system/"
                       : `mailto:shatermt@gmail.com?subject=KernUI Enterprise Inquiry`
                   }
                   target="_blank"
